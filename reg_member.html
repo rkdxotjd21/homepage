@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="reg.js"></script>
+    <title>회원가입 페이지</title>
+</head>
+<body>
+    <form autocomplete="off">
+        <fieldset>
+            <legend>회원가입 정보입력</legend>
+            <label>아이디:<input type="text" id="user_id" minlength="4" maxlength="12" placeholder="아이디를 입력하세요." required></label><br>
+            <label>비밀번호:<input type="password" id="user_pw" minlength="4" maxlength="12" placeholder="비밀번호를 입력하세요." required></label><br>
+            <label>비밀번호 재입력:<input type="password" id="user_pw_re" minlength="4" maxlength="12" placeholder="비밀번호를 입력하세요." required></label><br>
+            <label>이름:<input type="text" id="user_name" minlength="4" maxlength="12" placeholder="이름을 입력하세요."required></label><br>
+            <label>이메일:<input type="email" id="user_email" minlength="4" maxlength="12" placeholder="이메일을 입력하세요."required></label><br>
+            <label for="birth">생년월일:</label>
+            <input type="number" id="birth_y" min="1960" max="2023" value="1960" style="text-align: right;" required>
+            <select id="birth_m" style="text-align: right;" required>
+            </select>
+            <select id="birth_d" style="text-align: right;" required>
+            </select>
+            <br>
+            <input type="radio" name="sex" id="female" value="female" checked><label for="female">여성</label>
+            <input type="radio" name="sex" id="male" value="male"><label for="male">남성</label><br>
+            <label for="phonenum">전화번호:</label>
+                <select name="local_phonenum" id="phonenum1">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="015">015</option>
+                    <option value="016">016</option>
+                </select> - 
+                <input type="text" id="phonenum2" maxlength="4" size="1"> - 
+                <input type="text" id="phonenum3" maxlength="4" size="1"><br>
+            <input type="submit" value="회원가입" id="register" onclick="Register()">
+            <input type="reset" value="리셋">
+        </fieldset>
+    </form>
+</body>
+</html>
